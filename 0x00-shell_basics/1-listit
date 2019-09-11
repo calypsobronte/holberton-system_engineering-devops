@@ -1,0 +1,3 @@
+#!/bin/bash
+ls \
+# permisos chmod 755 \ 1-listit
