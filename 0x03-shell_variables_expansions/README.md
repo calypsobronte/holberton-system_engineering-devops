@@ -1,7 +1,6 @@
 # 0x03. Shell, init files, variables and expansions
 
-Links of publications for 
-- [Medium - Calypso Bronte](https://medium.com/@calypsobronte)
+Links of publications for [Medium - Calypso Bronte](https://medium.com/@calypsobronte)
 
 - [What happens when you type ls *.c](https://medium.com/@calypsobronte/what-happens-when-you-type-ls-c-6621eeadf39e?source=friends_link&sk=9cad33c92dbf773d4f7aaeeb479db465)
 
