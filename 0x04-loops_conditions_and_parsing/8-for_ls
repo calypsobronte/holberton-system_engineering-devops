@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# This script
 for file in *
 do
 echo  "$file" | cut -d - -f2
