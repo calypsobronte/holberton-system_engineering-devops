@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
 # Script
+# shellcheck disable=SC2009
+ps uxaf | grep bash
