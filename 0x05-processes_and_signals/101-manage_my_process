@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
 # Script
-pkill -f -SIGKILL 7-highlander
