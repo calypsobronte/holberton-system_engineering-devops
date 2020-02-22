@@ -1,0 +1,16 @@
+task 0 to 9
+hello_world/ = echo "hello world"
+current_working_directory/ = pwd
+list_files/ = ls
+print_file_contents/ = cat access.log
+last_lines/ = tail -5 access.log
+find_string_in_a_file/ grep 'GET' access.log
+search_for_files_containing_string/ = grep -l 500 *
+search_for_files_by_extension/ = find . -name 'ac*'
+search_for_string_in_files_recursive/ = grep -h 500 **/*.log*
+task 10 to 18
+extract_ip_addresses/ = grep -oPR "\d+\.\d+\.\d+\.\d+" *
+delete_files/ = rm -r * .*
+count_files/ = ls -l | wc -l
+simple_sort/ = sort access.log
+count_string_in_line/ = grep 'GET' access.log | wc -l
