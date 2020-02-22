@@ -20,5 +20,5 @@ File : 0-first_9_tasks
 
 
 
-[command]: https://s3.amazonaws.com/intranet-projects-files/holbertonschool-sysadmin_devops/324/06AChAO.png
+[command]: https://live.staticflickr.com/65535/49567671508_231250a4de_h.jpg
 [CMD CHALLENGE]: https://cmdchallenge.com/
