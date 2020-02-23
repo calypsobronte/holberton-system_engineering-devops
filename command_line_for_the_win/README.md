@@ -12,7 +12,9 @@ File : 0-first_9_tasks
 File : 1-next-9-tasks
 ![image-1][]
 
-
+## 2. Reach the perfect cube, 27
+File : 2-last-9-tasks
+![image-2][]
 
 
 
@@ -27,5 +29,7 @@ File : 1-next-9-tasks
 [CMD CHALLENGE]: https://cmdchallenge.com/
 [image-0]: https://live.staticflickr.com/65535/49572009963_0ca5120e3c_c.jpg
 [image-1]: https://live.staticflickr.com/65535/49572009978_3dafbf16be_c.jpg
+[image-2]: https://live.staticflickr.com/65535/49572672286_3f90459421_c.jpg
+
 
 
