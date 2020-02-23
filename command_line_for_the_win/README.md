@@ -6,8 +6,11 @@
 
 ## 0. First 九 tasks
 File : 0-first_9_tasks
-[image]
+[image-0]
 
+## 1. 1. Reach חי completed tasks
+File : 1-next-9-tasks
+[image-1]
 
 
 
@@ -22,3 +25,7 @@ File : 0-first_9_tasks
 
 [command]: https://live.staticflickr.com/65535/49567671508_231250a4de_h.jpg
 [CMD CHALLENGE]: https://cmdchallenge.com/
+[image-0]: https://live.staticflickr.com/65535/49572009963_0ca5120e3c_c.jpg
+[image-1]: https://live.staticflickr.com/65535/49572009978_3dafbf16be_c.jpg
+
+
