@@ -14,3 +14,8 @@ delete_files/ = rm -r * .*
 count_files/ = ls -l | wc -l
 simple_sort/ = sort access.log
 count_string_in_line/ = grep 'GET' access.log | wc -l
+split_on_a_char/ = tr ";" '\n' <s*
+print_number_sequence/ = echo {1..100}
+remove_files_with_extension/ = rm **/*.doc*
+sum_all_numbers/ = sed -i "challenges are difficult" **/*.txt
+
