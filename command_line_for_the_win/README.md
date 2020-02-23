@@ -6,11 +6,11 @@
 
 ## 0. First 九 tasks
 File : 0-first_9_tasks
-[image-0]
+![image-0][]
 
 ## 1. 1. Reach חי completed tasks
 File : 1-next-9-tasks
-[image-1]
+![image-1][]
 
 
 
