@@ -18,4 +18,14 @@ split_on_a_char/ = tr ";" '\n' <s*
 print_number_sequence/ = echo {1..100}
 remove_files_with_extension/ = rm **/*.doc*
 sum_all_numbers/ = sed -i "challenges are difficult" **/*.txt
+task 19 to 27
+sum_all_numbers/ = grep . **/*.txt | paste -sd+ | bc
+just_the_files/ = find . -type f | grep -io [a-z].*
+remove_extensions_from_files/ = rm -r *.* /*
+replace_spaces_in_filenames/ = ls | tr " " .
+dirs_containing_files_with_extension/ = find . -name *.tf -printf "%h\n" | sort | uniq
+files_starting_with_a_number/ = find -type f -printf "%f\n" | grep "^[0-9]"
+print_nth_line/ = sed -n '25p' faces.txt
+reverse_readme/ = tail -20 README | tac
+remove_duplicate_lines/ = cat -n faces.txt | sort -k2 | uniq -f1 | sort | cut -f2
 
