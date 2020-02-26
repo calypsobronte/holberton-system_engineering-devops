@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # coment
 cp /etc/hosts ~/hosts.tmp
-sed -i s/^127.*/"127.0.0.2 localhost"/ ~/hosts.tmp
+sed -i 's/127.0.0.1/127.0.0.2/g' ~/hosts.tmp
 echo "8.8.8.8 facebook.com" >> ~/hosts.tmp
 cp ~/hosts.tmp /etc/hosts
