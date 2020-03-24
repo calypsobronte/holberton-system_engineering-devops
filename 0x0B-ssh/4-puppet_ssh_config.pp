@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # Client configuration file (w/ Puppet)
 
-file_line {
-line => 'IdentityFile ~/.ssh/holberton',
+file_line { 'Turn off passwd auth'
+line => 'PasswordAuthentication no',
 path => '/etc/ssh/ssh_config'
 }
 
-file_line {
-line => 'PasswordAuthentication no',
+file_line { 'Declare identity file'
+line => 'IdentityFile ~/.ssh/holberton',
 path => '/etc/ssh/ssh_config'
 }
