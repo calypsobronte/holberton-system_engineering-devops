@@ -2,5 +2,6 @@
 #  Redirection
 
 sudo apt-get update
+sudo apt-get -y install nginx
 sudo sed -i "/^\tlocation \// i\ \tlocation /redirect_me {\n\t\treturn 301 https://calypsobronte.me;\n\t}" /etc/nginx/sites-enabled/default
 sudo service nginx restart
