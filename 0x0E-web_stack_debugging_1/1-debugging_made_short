@@ -2,4 +2,4 @@
 # 1. Make it sweet and short 
 sudo sed -i "s/8080/80/" /etc/nginx/sites-enabled/default
 sudo service nginx restart
-sudo pkill -9 nginx
+pkill -9 nginx
