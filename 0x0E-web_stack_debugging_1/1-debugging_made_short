@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 1. Make it sweet and short 
+# 1. Make it sweet and short
 sudo sed -i "s/8080/80/" /etc/nginx/sites-enabled/default
 sudo service nginx restart
-pkill -9 nginx
+sudo pkill -1 nginx
