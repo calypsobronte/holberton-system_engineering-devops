@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 # Web servers are the piece of software generating and serving HTML pages,
-
 sudo apt-get -y update
-sudo apt-get install -y nginx
-echo "Holberton School" >> /var/www/html/index.html
-sudo sed -i "60i\ \tadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
-sudo service nginx restart
+sudo apt-get -y install nginx
+echo "Holberton School" | sudo tee /var/www/html/index.html
+sed -i "60i\ \tadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
+service nginx start
