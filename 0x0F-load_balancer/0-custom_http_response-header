@@ -8,4 +8,5 @@ sudo sed -i "/^\tlocation \// i\ \tlocation /redirect_me {\n\t\treturn 301 https
 echo "Ceci n'est pas une page" | sudo tee -a /usr/share/nginx/html/terror_404.html
 sudo sed -i "46i \\\terror_page 404 /terror_404.html;\n\tlocation = /terror_404.html {\n\t\troot /usr/share/nginx/html;\n\t\tinternal;\n\t}" /etc/nginx/sites-enabled/default
 sudo sed -i "/location \/ {/a add_header X-Served-By \$HOSTNAME;" /etc/nginx/nginx.conf
+sudo ufw allow 'Nginx HTTP'
 sudo service nginx restart
