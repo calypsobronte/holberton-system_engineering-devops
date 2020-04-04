@@ -3,6 +3,6 @@
 
 sudo apt-get -y update
 sudo apt-get install -y nginx
-echo 'Holberton School' >> /var/www/html/index.nginx-debian.html
+echo "Holberton School" >> /var/www/html/index.html
 sudo sed -i "60i\ \tadd_header X-Served-By $HOSTNAME;" /etc/nginx/nginx.conf
 sudo service nginx restart
