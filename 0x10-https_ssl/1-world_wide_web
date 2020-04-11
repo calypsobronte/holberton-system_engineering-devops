@@ -3,15 +3,15 @@
 
 function(){
     commands=$(dig $1.$2 | grep -A1 'ANSWER SECTION:')
-    echo $var | awk '{print "The subdomain '$1' is a "$4" record and points to "$5}'
+    echo $commands | awk '{print "The subdomain '$1' is a "$4" record and points to "$5}'
 }
 
 if [ $2 ]
 then
-    print_text $1 $2
+    function $1 $2
 else
-    print_text $1 www
-    print_text $1 lb-01
-    print_text $1 web-01
-    print_text $1 web-02
+    function $1 www
+    function $1 lb-01
+    function $1 web-01
+    function $1 web-02
 fi
