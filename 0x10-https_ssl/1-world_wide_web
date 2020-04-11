@@ -6,12 +6,15 @@ function_test(){
     echo $commands | awk '{print "The subdomain '$1' is a "$4" record and points to "$5}'
 }
 
-if [ $2 ]
+if [ $# == 2 ];
 then
     function_test $2 $1
 else
-    function_test "www" $1
-    function_test "lb-01" $1
-    function_test "web-01" $1
-    function_test "web-02" $1
+    if [ $# == 1 ];
+    then
+        function_test "www" $1
+        function_test "lb-01" $1
+        function_test "web-01" $1
+        function_test "web-02" $1
+    fi
 fi
