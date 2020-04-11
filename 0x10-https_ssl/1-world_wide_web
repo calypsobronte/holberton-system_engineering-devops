@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
-# subdomins
+# Bash script that will display information about subdomains
 
-function(){
+function_test(){
     commands=$(dig "$1"."$2" | grep -A1 'ANSWER SECTION:' | cut -d ":" -f 2)
     echo $commands | awk '{print "The subdomain '$1' is a "$4" record and points to "$5}'
 }
 
 if [ $2 ]
 then
-    function $1 $2
+    function_test $2 $1
 else
-    function $1 www
-    function $1 lb-01
-    function $1 web-01
-    function $1 web-02
+    function_test "www" $1
+    function_test "lb-01" $1
+    function_test "web-01" $1
+    function_test "web-02" $1
 fi
