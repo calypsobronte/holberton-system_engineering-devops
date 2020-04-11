@@ -2,7 +2,7 @@
 # subdomins
 
 function(){
-    commands=$(dig $1.$2 | grep -A1 'ANSWER SECTION:')
+    commands=$(dig "$1"."$2" | grep -A1 'ANSWER SECTION:' | cut -d ":" -f 2)
     echo $commands | awk '{print "The subdomain '$1' is a "$4" record and points to "$5}'
 }
 
