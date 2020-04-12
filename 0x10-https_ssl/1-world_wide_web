@@ -1,20 +1,19 @@
 #!/usr/bin/env bash
-# Bash script that will display information about subdomains
+# Bash script that will display information about commands
 
-function_test(){
-    commands=$(dig "$1"."$2" | grep -A1 'ANSWER SECTION:' | cut -d ":" -f 2)
-    echo $commands | awk '{print "The subdomain '$1' is a "$4" record and points to "$5}'
-}
-
-if [ $# == 2 ];
-then
-    function_test $1 $2
-else
-    if [ $# == 1 ];
+function_test()
+{
+    if [ -z "$2" ]
     then
-        function_test "www" $1
-        function_test "lb-01" $1
-        function_test "web-01" $1
-        function_test "web-02" $1
+        commands=("www" "lb-01" "web-01" "web-02")
+    else
+        commands=$2
     fi
-fi
+    for subdomain in "${commands[@]}"
+    do
+        echo -n "The subdomain $subdomain"
+        dig "$subdomain.$1" | grep -A1 'ANSWER SECTION:' | tail -n -1 | awk '{ print " is a " $4 " record and points to " $5}'
+    done
+}
+function_test "$1" "$2"
+exit 0
