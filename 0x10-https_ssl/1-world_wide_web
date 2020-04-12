@@ -11,6 +11,6 @@ for sub in "www" "lb-01" "web-01" "web-02"
 do
     if [ -z "$2" ] || [ "$2" == "$sub" ] ;
     then
-	display_info "$1" "$sub"
+	function_test "$1" "$sub"
     fi
 done
