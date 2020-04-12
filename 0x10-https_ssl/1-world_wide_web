@@ -2,16 +2,15 @@
 # Bash script that will display function_test about commands
 function_test ()
 {
-	domain="$1"
-	subdomain="$2"
-
-dig "$subdomain.$domain" | awk -v subdomain="$2" '/;; ANSWER SECTION:/{getline; print "The subdomain "subdomain" is a " $4 " record and points to " $5}'
+    dom="$1"
+    sub="$2"
+    dig "$sub.$dom" | awk '/ANSWER SECTION:/{getline; printf "The subdomain %s is a %s record and points to %s\n", su, $4, $5}' su="$sub"
 }
 
-for subdomain in "www" "lb-01" "web-01" "web-02" 
+for sub in "www" "lb-01" "web-01" "web-02"
 do
-	if [ -z "$2" ] || [ "$2" == "$subdomain" ];
-	then
-		function_test "$1" "$subdomain"
-	fi
+    if [ -z "$2" ] || [ "$2" == "$sub" ] ;
+    then
+	display_info "$1" "$sub"
+    fi
 done
