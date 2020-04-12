@@ -1,19 +1,15 @@
 #!/usr/bin/env bash
-# Bash script that will display information about commands
-
-function_test()
-{
-    if [ -z "$2" ]
-    then
-        commands=("www" "lb-01" "web-01" "web-02")
-    else
-        commands=$2
-    fi
-    for subdomain in "${commands[@]}"
-    do
-        echo -n "The subdomain $subdomain"
-        dig "$subdomain.$1" | grep -A1 'ANSWER SECTION:' | tail -n -1 | awk '{ print " is a " $4 " record and points to " $5}'
-    done
+# Bash script that will display function_test about commands
+function_test(){
+	domain="$1"
+	subdomain="$2"
+    dig "$subdomain.$domain" | awk -v subdomain="$2" '/;; ANSWER SECTION:/{getline; print "The subdomain "subdomain" is a " $4 " record and points to " $5}'
 }
-function_test "$1" "$2"
-exit 0
+
+for subdomain in "www" "lb-01" "web-01" "web-02"
+do
+	if [ -z "$2" ] || [ "$2" == "$subdomain" ];
+	then
+		function_test "$1" "$subdomain"
+	fi
+done
