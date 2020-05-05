@@ -15,4 +15,4 @@ if __name__ == '__main__':
         writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         for task in api_todos:
             writer.writerow([int(user_id), name_users.get('username'),
-                                 task.get('completed'), task.get('title')])
+                            task.get('completed'), task.get('title')])
