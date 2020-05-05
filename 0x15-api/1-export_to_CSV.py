@@ -11,9 +11,8 @@ if __name__ == '__main__':
     api_todos = requests.get(url_todos.format(user_id)).json()
     url_names = 'https://jsonplaceholder.typicode.com/users/{}'
     name_users = requests.get(url_names.format(user_id)).json()
-    with open('{}.csv'.format(user_id), 'w') as response:
-        writer = csv.writer(response, delimiter=',',
-                            quoting=csv.QUOTE_ALL)
+    with open("{}.csv".format(user_id), 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         for task in api_todos:
-            writer.writerow([user_id, name_users.get('username'),
-                            task.get('completed'), task.get('title')])
+            writer.writerow([int(user_id), name_users.get('username'),
+                                 task.get('completed'), task.get('title')])
