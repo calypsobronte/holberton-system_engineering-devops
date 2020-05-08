@@ -13,8 +13,8 @@ def recurse(subreddit, hot_list=[], after=""):
         try:
             for i in info.get('data').get('children'):
                 hot_list.append(i.get("data").get("title"))
-            return hot_list + recurse(subreddit, [],
-                                      info.get("data").get("after"))
-        except Exception:
             if after is None:
-                return []
+                return hot_list
+            return recurse(subreddit, hot_list, info.get("data").get("after"))
+        except Exception:
+            return None
